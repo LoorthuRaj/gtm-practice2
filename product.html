@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product - Awesome Shoes</title>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    dataLayer.push({
+      event: "view_item",
+      ecommerce: {
+        items: [{
+          item_id: "shoes-123",
+          item_name: "Awesome Shoes",
+          price: 59.99,
+          category: "Footwear"
+        }]
+      }
+    });
+  </script>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 40px; background: #f4f4f4; }
+    h1, p { color: #333; }
+    button { padding: 10px 20px; background: #28a745; color: #fff; border: none; border-radius: 5px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1>Awesome Shoes</h1>
+  <p>Price: $59.99</p>
+  <button onclick="
+    dataLayer.push({
+      event: 'add_to_cart',
+      ecommerce: {
+        items: [{
+          item_id: 'shoes-123',
+          item_name: 'Awesome Shoes',
+          price: 59.99,
+          quantity: 1
+        }]
+      }
+    });
+  ">Add to Cart</button>
+
+  <br><br>
+  <button onclick="
+    dataLayer.push({
+      event: 'purchase',
+      ecommerce: {
+        transaction_id: 'T12345',
+        value: 59.99,
+        currency: 'USD',
+        items: [{
+          item_id: 'shoes-123',
+          item_name: 'Awesome Shoes',
+          price: 59.99,
+          quantity: 1
+        }]
+      }
+    });
+  ">Simulate Purchase</button>
+</body>
+</html>

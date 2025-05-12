@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple eCommerce - Home</title>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    dataLayer.push({
+      event: "page_view",
+      page_type: "home"
+    });
+  </script>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 40px; background: #f4f4f4; }
+    h1, h2 { color: #333; }
+    .product { margin-bottom: 20px; background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 0 5px #ccc; }
+    .product a { text-decoration: none; color: #007BFF; }
+  </style>
+</head>
+<body>
+  <h1>Welcome to Our Shop</h1>
+  <div class="product">
+    <h2>Awesome Shoes</h2>
+    <p>Comfortable running shoes for daily use.</p>
+    <a href="product.html" onclick="dataLayer.push({event: 'product_click', product_id: 'shoes-123', product_name: 'Awesome Shoes'});">View Product</a>
+  </div>
+</body>
+</html>
