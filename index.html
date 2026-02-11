@@ -5,21 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Simple eCommerce - Home</title>
   <script>
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({
-      event: "page_view",
-      page: {
-        name: "Awesome Shoes",
-        type: "Home Page",
-        url: location.href,
-        section: "Ecommerce"
-      },
-      user: {
-        loginStatus: "guest",
-        id: null
-      }
-      });
-
+    window.digitalData = {
+  page: {
+    pageInfo: {
+      name: "Awesome Shoes",
+      type: "Home Page",
+      section: "Ecommerce",
+      url: location.href
+    }
+  },
+  user: {
+    profile: {
+      loginStatus: "guest",
+      id: null
+    }
+  }
+};
   </script>
   <style>
     body { font-family: Arial, sans-serif; margin: 40px; background: #f4f4f4; }
